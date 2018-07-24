@@ -1,9 +1,11 @@
 package miszewski.jipang.model;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
 
+@Entity
 public class Word_Test {
 
     @Id

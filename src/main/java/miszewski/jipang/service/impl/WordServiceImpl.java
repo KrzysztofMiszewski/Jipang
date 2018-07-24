@@ -23,6 +23,7 @@ public class WordServiceImpl implements WordService {
         Word word = new Word();
         word.setPolish(polish);
         word.setJapanese(japanese);
+        wordRepository.save(word);
     }
 
     @Override

@@ -19,6 +19,7 @@ public class Word_TestImpl implements Word_TestService {
     public void create(Word word) {
         Word_Test word_test = new Word_Test();
         word_test.setWord(word);
+        word_testRepository.save(word_test);
     }
 
     @Override
