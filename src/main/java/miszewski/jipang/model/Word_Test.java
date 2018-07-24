@@ -1,9 +1,6 @@
 package miszewski.jipang.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
 public class Word_Test {
@@ -13,6 +10,8 @@ public class Word_Test {
     private Long id;
     @OneToOne
     private Word word;
+    @ManyToOne
+    private Test test;
     private Boolean isCorrect;
 
     public Long getId() {
