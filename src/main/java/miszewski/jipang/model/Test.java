@@ -11,6 +11,8 @@ public class Test {
     private Long id;
     @OneToMany(mappedBy = "test")
     private Set<Word_Test> word_tests;
+    @ManyToOne
+    private User user;
 
     public Long getId() {
         return id;
