@@ -1,5 +1,6 @@
 package miszewski.jipang.service;
 
+import miszewski.jipang.dto.TestDto;
 import miszewski.jipang.model.Test;
 import miszewski.jipang.model.Word_Test;
 
@@ -7,7 +8,7 @@ import java.util.Set;
 
 public interface TestService {
 
-    void create(Set<Word_Test> word_tests);
-    Set<Test> findAllBy();
+    Test create();
+    Set<TestDto> findAllBy();
     Set<Test> findById(Long id);
 }

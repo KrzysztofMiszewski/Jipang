@@ -11,8 +11,8 @@ public class Test {
     private Long id;
     @OneToMany(mappedBy = "test")
     private Set<Word_Test> word_tests;
-    @ManyToOne
-    private User user;
+    //@ManyToOne
+    //private User user;
 
     public Long getId() {
         return id;
@@ -24,5 +24,9 @@ public class Test {
 
     public void setWord_tests(Set<Word_Test> word_tests) {
         this.word_tests = word_tests;
+    }
+
+    public void addWord_test(Word_Test word_test) {
+        word_tests.add(word_test);
     }
 }

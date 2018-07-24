@@ -14,6 +14,14 @@ public class Word_Test {
     private Test test;
     private Boolean isCorrect;
 
+    public Test getTest() {
+        return test;
+    }
+
+    public void setTest(Test test) {
+        this.test = test;
+    }
+
     public Long getId() {
         return id;
     }

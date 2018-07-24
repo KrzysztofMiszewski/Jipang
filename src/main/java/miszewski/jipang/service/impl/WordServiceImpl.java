@@ -6,6 +6,8 @@ import miszewski.jipang.service.WordService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Set;
 
 @Service
@@ -34,5 +36,10 @@ public class WordServiceImpl implements WordService {
     @Override
     public Set<Word> findById(Long bookId) {
         return wordRepository.findById(bookId);
+    }
+
+    @Override
+    public Integer countBy() {
+        return wordRepository.countBy();
     }
 }

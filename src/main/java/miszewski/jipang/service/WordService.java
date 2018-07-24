@@ -9,4 +9,5 @@ public interface WordService {
     void create(String polish, String japanese);
     Set<Word> findAllBy();
     Set<Word> findById(Long bookId);
+    Integer countBy();
 }

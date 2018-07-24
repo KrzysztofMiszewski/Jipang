@@ -3,6 +3,7 @@ package miszewski.jipang.service.impl;
 import miszewski.jipang.model.User;
 import miszewski.jipang.repository.UserRepository;
 import miszewski.jipang.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -11,6 +12,11 @@ import java.util.Set;
 public class UserServiceImpl implements UserService {
 
     private UserRepository userRepository;
+
+    @Autowired
+    public UserServiceImpl(UserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
 
     @Override
     public void create(String name) {

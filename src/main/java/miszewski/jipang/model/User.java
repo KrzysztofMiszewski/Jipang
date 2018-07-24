@@ -4,14 +4,15 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
+@Table(name = "User")
 public class User {
 
     @Id
     @GeneratedValue
     private Long id;
     private String name;
-    @OneToMany(mappedBy = "user")
-    private Set<Test> tests;
+    //@OneToMany(mappedBy = "user")
+    //private Set<Test> tests;
 
     public Long getId() {
         return id;
@@ -25,11 +26,11 @@ public class User {
         this.name = name;
     }
 
-    public Set<Test> getTests() {
-        return tests;
-    }
+//    public Set<Test> getTests() {
+//        return tests;
+//    }
 
-    public void setTests(Set<Test> tests) {
-        this.tests = tests;
-    }
+//    public void setTests(Set<Test> tests) {
+//        this.tests = tests;
+//    }
 }
